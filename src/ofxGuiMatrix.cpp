@@ -3,15 +3,21 @@
 using namespace std;
 
 ofxGuiMatrix::ofxGuiMatrix(){
+	numCol=0;
+	 w_matrix=0, w_element=0, h_element=20;
 }
 
 ofxGuiMatrix::ofxGuiMatrix(string collectionName, int cols, string filename, float x, float y)
     :ofxGuiGroupExtended(){
+	numCol=0;
+	 w_matrix=0, w_element=0, h_element=20;
     setup(collectionName, cols, filename, x, y);
 }
 
 ofxGuiMatrix::ofxGuiMatrix(const ofParameterGroup & parameters, int cols, string filename, float x, float y)
     :ofxGuiGroupExtended(parameters, filename, x, y){
+	numCol=0;
+	 w_matrix=0, w_element=0, h_element=20;
     setColNum(cols);
     sizeChangedCB();
     setNeedsRedraw();

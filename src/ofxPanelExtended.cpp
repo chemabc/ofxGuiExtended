@@ -47,8 +47,10 @@ void ofxPanelExtended::loadIcons(){
     loadStencilFromHex(loadIcon, loadIconData);
     loadStencilFromHex(saveIcon, saveIconData);
 
-    loadIcon.getTexture().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
-    saveIcon.getTexture().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
+    //loadIcon.getTexture().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
+    //saveIcon.getTexture().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
+	loadIcon.getTextureReference().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
+	saveIcon.getTextureReference().setTextureMinMagFilter(GL_NEAREST,GL_NEAREST);
 }
 
 void ofxPanelExtended::generateDraw(){

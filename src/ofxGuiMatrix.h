@@ -43,7 +43,7 @@ protected:
 
     virtual bool setValue(float mx, float my, bool bCheck);
 
-    int numCol=0;
-    float w_matrix=0, w_element=0, h_element=20;
+    int numCol;
+    float w_matrix, w_element, h_element;
 
 };

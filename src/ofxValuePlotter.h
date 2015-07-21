@@ -35,7 +35,7 @@ protected:
     float lastVal;
     float minVal, maxVal;
     bool autoscale;
-    int decimalPlace=3;
+    int decimalPlace;
     ofParameter<string> label;
 
 };

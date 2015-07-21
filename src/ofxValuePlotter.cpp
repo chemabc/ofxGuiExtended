@@ -2,10 +2,14 @@
 #include "ofGraphics.h"
 using namespace std;
 
-ofxValuePlotter::ofxValuePlotter() {}
+ofxValuePlotter::ofxValuePlotter() {
+	decimalPlace=3;
+}
 
 ofxValuePlotter::ofxValuePlotter(string label, float minValue, float maxValue, int plotSize, float width, float height){
-    setup(label, minValue, maxValue, plotSize, width, height);
+    decimalPlace=3;    
+	setup(label, minValue, maxValue, plotSize, width, height);
+
 }
 
 ofxValuePlotter::~ofxValuePlotter(){

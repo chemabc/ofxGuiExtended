@@ -176,7 +176,8 @@ bool ofxGuiGroupExtended::mouseReleased(ofMouseEventArgs & args){
 }
 
 bool ofxGuiGroupExtended::mouseScrolled(ofMouseEventArgs & args){
-    return ofxGuiGroup::mouseScrolled(args);
+    //return ofxGuiGroup::mouseScrolled(args);
+	return false;
 }
 
 void ofxGuiGroupExtended::generateDraw(){

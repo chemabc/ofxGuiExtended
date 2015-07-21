@@ -25,7 +25,10 @@ ofxGuiZoomableBaseDraws* ofxGuiZoomableBaseDraws::setup(string graphicsName, ofB
 
 void ofxGuiZoomableBaseDraws::setSize(float w, float h){
     ofxGuiBaseDraws::setSize(w,h);
-    contentFbo.clear();
+    //contentFbo.clear();
+	contentFbo.begin();
+	ofClear(255,255,255,0);
+	contentFbo.end();
     if(_bLoaded) {
         contentFbo.allocate(b.width, b.height, GL_RGBA);
     }
@@ -34,7 +37,10 @@ void ofxGuiZoomableBaseDraws::setSize(float w, float h){
 
 void ofxGuiZoomableBaseDraws::setShape(float x, float y, float w, float h){
     ofxGuiBaseDraws::setShape(x,y,w,h);
-    contentFbo.clear();
+    //contentFbo.clear();
+	contentFbo.begin();
+	ofClear(255,255,255,0);
+	contentFbo.end();
     if(_bLoaded) {
         contentFbo.allocate(b.width, b.height, GL_RGBA);
     }

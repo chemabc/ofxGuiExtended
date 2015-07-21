@@ -1,5 +1,6 @@
 #include "ofxMasterSlaveControl.h"
 
+
 ofxMasterSlaveControl& ofxMasterSlaveControl::get() {
     static ofxMasterSlaveControl instance;
     return instance;
@@ -25,9 +26,9 @@ void ofxMasterSlaveControl::draw() {
         ofNoFill();
         ofSetLineWidth(3);
         for(unsigned int i = 0; i < slaves.size(); i++) {
-            ofDrawRectangle(slaves.at(i)->control->getShape());
+            ofRect(slaves.at(i)->control->getShape());
         }
-        ofDrawRectangle(activeMaster->control->getShape());
+        ofRect(activeMaster->control->getShape());
     }
 }
 

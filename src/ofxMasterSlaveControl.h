@@ -6,6 +6,10 @@
 struct MasterControl {
 
     MasterControl(ofxBaseGui* _control) {
+		isActive = false;
+		slider = false;
+		min=1;
+		max=1;
         control = _control;
         if(ofxSlider<float>* slider = dynamic_cast<ofxSlider<float>*>(control)) {
             min = slider->getMin();
@@ -17,23 +21,29 @@ struct MasterControl {
         }
     }
 
-    ofxBaseGui* control = 0;
-    bool isActive = false;
-    bool slider = false;
-    float min=1, max=1;
+    ofxBaseGui* control;
+    bool isActive;
+    bool slider;
+    float min, max;
 };
 
 struct SlaveControl {
 
-    ofxBaseGui* control = 0;
-    bool isControlled = false;
-    bool isListening = false;
-    bool slider = false;
-    float min=0, max=1;
-    MasterControl* master = 0;
+    ofxBaseGui* control;
+    bool isControlled;
+    bool isListening;
+    bool slider;
+    float min, max;
+    MasterControl* master;
     ofColor defaultBackgroundColor;
 
     SlaveControl(ofxBaseGui* _control) {
+		isControlled = false;
+		isListening = false;
+		slider = false;
+		min=0, max=1;
+		master = 0;
+
         this->control = _control;
         defaultBackgroundColor = control->getBackgroundColor();
         if(ofxSlider<float>* slider = dynamic_cast<ofxSlider<float>*>(control)) {
