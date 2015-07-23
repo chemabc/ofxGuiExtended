@@ -1,6 +1,7 @@
 #include "ofxTabbedPages.h"
 #include "ofGraphics.h"
 #include "ofxMinimalToggle.h"
+#include <assert.h>
 using namespace std;
 
 ofxTabbedPages::ofxTabbedPages()
@@ -247,7 +248,9 @@ void ofxTabbedPages::sizeChangedCB(){
     for(unsigned int i = 1; i < collection.size(); i++) {
         collection[i]->setShape(pagesShape);
     }
-    if(parent) parent->sizeChangedCB();
+	if(parent) parent->sizeChangedCB();
+
+    
     setNeedsRedraw();
 }
 

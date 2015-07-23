@@ -7,6 +7,8 @@ ofxGuiGroupExtended::ofxGuiGroupExtended(){
     _bVertical = true;
     _bUseHeader = true;
     _bAllowMultiple = true;
+	parent = NULL;
+	
 }
 
 ofxGuiGroupExtended::ofxGuiGroupExtended(const ofParameterGroup & parameters, string filename, float x, float y)
@@ -14,6 +16,8 @@ ofxGuiGroupExtended::ofxGuiGroupExtended(const ofParameterGroup & parameters, st
     _bVertical = true;
     _bUseHeader = true;
     _bAllowMultiple = true;
+	parent = NULL;
+	
 }
 
 ofxGuiGroupExtended * ofxGuiGroupExtended::setup(string collectionName, string filename, float x, float y){

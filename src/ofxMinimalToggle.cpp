@@ -76,6 +76,8 @@ void ofxMinimalToggle::generateDraw(){
     border.rectangle(b.getPosition()+checkboxRect.getTopLeft(),checkboxRect.width,checkboxRect.height);
 
     textMesh = getTextMesh(getName(), b.x+textPadding, b.y+b.height / 2 + 4);
+
+	cout << " Pos: " << b.getPosition() << " checkboxRect: " << checkboxRect.getTopLeft() << " checkboxRect: " << checkboxRect.width << " checkboxRect: " << checkboxRect.height << endl; 
 }
 
 void ofxMinimalToggle::render(){
